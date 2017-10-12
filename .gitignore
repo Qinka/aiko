@@ -12,3 +12,6 @@ CTestTestfile.cmake
 
 # for vscode
 .vscode
+
+# for macOS
+.DS_Store
