@@ -8,7 +8,6 @@
  *               and stack location according to application requirements.
  * @target       STMicroelectronics STM32F103ZET6
  * 
- * @auth         Qinka <me@qinka.pro>
  * @maintain     Qinka <me@qinka.pro>
  * @version      0.1.0.0
  * @license      GPLv3
