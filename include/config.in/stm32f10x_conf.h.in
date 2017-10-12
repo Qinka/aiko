@@ -25,38 +25,38 @@
 
 /* Includes ------------------------------------------------------------------*/
 /* Uncomment/Comment the line below to enable/disable peripheral header file inclusion */                                                             
-@USE_ADC@
-@USE_BKP@
-@USE_CAN@
-@USE_CEC@
-@USE_CRC@
-@USE_DAC@
-@USE_DBGMCU@
-@USE_DMA@
-@USE_EXTI@
-@USE_FLASH@
-@USE_FSMC@
-@USE_GPIO@
-@USE_I2C@
-@USE_IWDG@
-@USE_PWR@
-@USE_RCC@
-@USE_RTC@
-@USE_SDIO@
-@USE_SPI@
-@USE_TIM@
-@USE_USART@
-@USE_WWDG@
+@AIKO_FIRMWARE_USE_ADC@
+@AIKO_FIRMWARE_USE_BKP@
+@AIKO_FIRMWARE_USE_CAN@
+@AIKO_FIRMWARE_USE_CEC@
+@AIKO_FIRMWARE_USE_CRC@
+@AIKO_FIRMWARE_USE_DAC@
+@AIKO_FIRMWARE_USE_DBGMCU@
+@AIKO_FIRMWARE_USE_DMA@
+@AIKO_FIRMWARE_USE_EXTI@
+@AIKO_FIRMWARE_USE_FLASH@
+@AIKO_FIRMWARE_USE_FSMC@
+@AIKO_FIRMWARE_USE_GPIO@
+@AIKO_FIRMWARE_USE_I2C@
+@AIKO_FIRMWARE_USE_IWDG@
+@AIKO_FIRMWARE_USE_PWR@
+@AIKO_FIRMWARE_USE_RCC@
+@AIKO_FIRMWARE_USE_RTC@
+@AIKO_FIRMWARE_USE_SDIO@
+@AIKO_FIRMWARE_USE_SPI@
+@AIKO_FIRMWARE_USE_TIM@
+@AIKO_FIRMWARE_USE_USART@
+@AIKO_FIRMWARE_USE_WWDG@
 #include <firmware/misc.h>
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Uncomment the line below to expanse the "assert_param" macro in the 
    Standard Peripheral Library drivers code */
-/* #define USE_FULL_ASSERT    1 */
+/* #define AIKO_FIRMWARE_USE_FULL_ASSERT    1 */
 
 /* Exported macro ------------------------------------------------------------*/
-#ifdef  USE_FULL_ASSERT
+#ifdef  AIKO_FIRMWARE_USE_FULL_ASSERT
 
 /**
   * @brief  The assert_param macro is used for function's parameters check.
@@ -70,7 +70,7 @@
   void assert_failed(uint8_t* file, uint32_t line);
 #else
   #define assert_param(expr) ((void)0)
-#endif /* USE_FULL_ASSERT */
+#endif /* AIKO_FIRMWARE_USE_FULL_ASSERT */
 
 #endif /* __STM32F10x_CONF_H */
 
