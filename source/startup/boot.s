@@ -74,7 +74,7 @@ LoopFillZerobss:
 	cmp r2, r3
 	bcc FillZerobss
 /* Call the aiko's entry point: aiko_initializtion */
-	bl aiko_initializtion
+	bl aiko_initialization
 	bx lr
 
 /* Zero fill the bss segment. */  
