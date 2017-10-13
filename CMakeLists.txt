@@ -35,7 +35,6 @@ endif (CMAKE_HOST_SYSTEM_NAME MATCHES "Windows")
 
 
 ## add include path
-## firmware
 include_directories (include/)
 
 ## add source files
@@ -44,8 +43,8 @@ include_directories (include/)
 #endif (DEFINED AIKO_DEBUG_WATCH_SRC_FILE)
 ## start up
 set (AIKO_SRC_FILE "source/startup/boot.s")
-## firmware
-set (AIKO_SRC_FILE ${AIKO_SRC_FILE} ${AIKO_FIRMWARE_SRC_FILE})
 ## initialzation
 aux_source_directory(source/initialzation AIKO_SRC_FILE)
-add_executable(aiko.elf ${AIKO_SRC_FILE})
+## job
+aux_source_directory(source/job AIKO_SRC_FILE)
+add_library(aiko ${AIKO_SRC_FILE})

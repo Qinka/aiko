@@ -8,4 +8,3 @@
 
 ## configure the compiler
 include(${AIKO_PATH_CONFIG}/compiler.cmake)
-include(${AIKO_PATH_CONFIG}/in.cmake)

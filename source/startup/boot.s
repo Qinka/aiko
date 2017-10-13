@@ -73,8 +73,6 @@ LoopFillZerobss:
 	ldr r3, = _ebss
 	cmp r2, r3
 	bcc FillZerobss
-/* Call the clock system intitialization function */
-//bl SystemInit
 /* Call the aiko's entry point: aiko_initialztion */
 	bl aiko_initialztion
 	bx lr
