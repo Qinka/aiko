@@ -35,7 +35,7 @@ endif (CMAKE_HOST_SYSTEM_NAME MATCHES "Windows")
 
 
 ## add include path
-include_directories (include/)
+include_directories (include/aiko)
 
 ## add source files
 #if(DEFINED AIKO_DEBUG_WATCH_SRC_FILE)
@@ -47,4 +47,12 @@ set (AIKO_SRC_FILE "source/startup/boot.s")
 aux_source_directory(source/initialzation AIKO_SRC_FILE)
 ## job
 aux_source_directory(source/job AIKO_SRC_FILE)
-add_library(aiko ${AIKO_SRC_FILE})
+## to build library
+add_library(aiko STATIC ${AIKO_SRC_FILE})
+## install files
+## target
+install(TARGETS aiko DESTINATION lib)
+## link script
+install(FILES link/aiko.ld DESTINATION share/aiko)
+## include files
+install(DIRECTORY include/aiko DESTINATION include)
