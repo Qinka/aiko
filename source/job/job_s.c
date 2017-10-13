@@ -4,7 +4,7 @@
  * @copyright Copyright (C) 2017 Johann Lee <me@qinka.pro>
  */
 
-#include <job/job_s.h>
+#include <aiko/job/job_s.h>
 
 // lock for scheduler
 char job_s_lock = 0;

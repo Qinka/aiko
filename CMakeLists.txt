@@ -35,7 +35,7 @@ endif (CMAKE_HOST_SYSTEM_NAME MATCHES "Windows")
 
 
 ## add include path
-include_directories (include/aiko)
+include_directories (include)
 
 ## add source files
 #if(DEFINED AIKO_DEBUG_WATCH_SRC_FILE)
