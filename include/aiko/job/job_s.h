@@ -9,7 +9,7 @@
 #define _JOB_S_H_
 
 // include
-#include <job/job_t.h>
+#include <aiko/job/job_t.h>
 
 // add a job in to queue
 int job_add(struct job_t*);
