@@ -64,7 +64,7 @@ int job_scheduler_launch() {
     // loop
     while(1) {
       struct job_t * cur = job_get();
-      if(job_get)
+      if(cur)
         cur -> job_method(cur);
     }
     job_s_lock = 0;
