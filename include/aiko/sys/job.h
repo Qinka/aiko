@@ -5,11 +5,11 @@
  * @copyright Copyright (C) 2017 Johann Lee <me@qinka.pro>
  */
 
-#ifndef _JOB_S_H_
-#define _JOB_S_H_
+#ifndef _AIKO_SYS_JOB_H_
+#define _AIKO_SYS_JOB_H_
 
 // include
-#include <aiko/job/job_t.h>
+#include <aiko/types.h>
 
 // add a job in to queue
 int job_add(struct job_t*);
@@ -17,4 +17,4 @@ int job_add(struct job_t*);
 // launch job scheduler
 int job_scheduler_launch();
 
-#endif // _JOB_S_H_ & end of job_s.h
+#endif // _AIKO_SYS_JOB_H_ & end of job_s.h

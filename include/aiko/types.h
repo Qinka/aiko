@@ -1,16 +1,14 @@
-/**
- * @snapshot job types
- *           header
- * @file  job_t.h
- * @copyright Copyright (C) 2017 Johann Lee <me@qinka.pro>
+/***
+ * basic types for aiko
  * 
  */
 
-#ifndef _JOB_T_H_
-#define _JOB_T_H_
+ #ifndef _AIKO_TYPES_H_
+ #define _AIKO_TYPES_H_
+
 
 /**
- * job's function typr
+ * job's function type
  */
 struct job_t;
 typedef void (*job_func_t)(struct job_t *);
@@ -25,4 +23,5 @@ struct job_t {
   struct job_t* next_job_p;
 };
 
-#endif // _JOB_T_H_ & end of job_t.h
+ 
+ #endif // !_AIKO_TYPES_H_
