@@ -1,4 +1,4 @@
-#include <aiko/job/job_s.h>
+#include <aiko/sys/job.h>
 
 /**
  * these two init-function should be defined in

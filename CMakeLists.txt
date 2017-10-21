@@ -46,7 +46,7 @@ set (AIKO_SRC_FILE "source/startup/boot.s")
 ## initialzation
 aux_source_directory(source/initialzation AIKO_SRC_FILE)
 ## job
-aux_source_directory(source/job AIKO_SRC_FILE)
+aux_source_directory(source/core AIKO_SRC_FILE)
 ## to build library
 add_library(aiko STATIC ${AIKO_SRC_FILE})
 ## install files
