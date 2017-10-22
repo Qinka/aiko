@@ -12,11 +12,11 @@ char job_s_lock = 0;
 /**
  * the job queue's head
  */
-static volatile struct job_t * job_queue_head_p = 0;
+static struct job_t * job_queue_head_p = 0;
 /**
  * the job queue's tail
  */
-static volatile struct job_t * job_queue_tail_p = 0;
+static struct job_t * job_queue_tail_p = 0;
 
 /**
  * add a job to queue
@@ -49,7 +49,7 @@ struct job_t* job_get() {
   if (job_queue_head_p) {
     // job queue not empty
     rt = job_queue_head_p;
-    if (job_queue_tail_p == job_queue_tail_p)
+    if (job_queue_head_p == job_queue_tail_p)
       job_queue_tail_p = 0;
     job_queue_head_p = job_queue_head_p -> next_job_p;
   }
