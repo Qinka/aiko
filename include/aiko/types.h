@@ -3,9 +3,11 @@
  * 
  */
 
- #ifndef _AIKO_TYPES_H_
- #define _AIKO_TYPES_H_
+#ifndef _AIKO_TYPES_H_
+#define _AIKO_TYPES_H_
 
+#include <stdint.h>
+#include <stdbool.h>
 
 /**
  * job's function type
@@ -24,4 +26,4 @@ struct job_t {
 };
 
  
- #endif // !_AIKO_TYPES_H_
+#endif // !_AIKO_TYPES_H_
