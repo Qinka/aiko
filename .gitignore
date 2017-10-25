@@ -19,3 +19,6 @@ build
 
 # for macOS
 .DS_Store
+
+# disable .ignore
+.ignore
