@@ -104,8 +104,10 @@ void wait_handler(void) {
       curr->wait_time -= 1;
       last = curr;
     } else {
-      if(last != curr)
+      if (last != curr)
         last->next_wait_p = curr->next_wait_p;
+      else
+        wait_queue = curr->next_wait_p;
       __job_add(curr->wait_job);
       free(curr);
     }
