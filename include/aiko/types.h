@@ -9,9 +9,18 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+/// macros
+#define NULL 0
+
+
+/// size type
+typedef uint32_t size_t;
+
 /**
  * job's function type
  */
+struct wait_t;
+struct job_t;
 typedef void (*job_func_t)(struct job_t *);
 
 /**
@@ -28,8 +37,8 @@ struct job_t {
  * ADT for job wait timer
  */
 struct wait_t {
-  job_t *wait_job;
+  struct job_t *wait_job;
   int8_t wait_time;
-  wait_t *next_wait_p;
+  struct wait_t *next_wait_p;
 };
 #endif // !_AIKO_TYPES_H_

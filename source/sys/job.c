@@ -42,12 +42,13 @@ int __job_add(struct job_t *j) {
  * add a job to wait queue
  * @param j the job to be added
  */
-int __wait_add(struct job_t *j, int8_t w) {
-  struct wait_t *w = malloc(sizeof(struct wait_t));
+int __wait_add(struct job_t *j, int8_t t) {
+  struct wait_t *w = (struct wait_t *)malloc(sizeof(struct wait_t));
   w->wait_job = j;
-  w->wait_time = w;
+  w->wait_time = t;
   w->next_wait_p = wait_queue;
   wait_queue = w;
+  return 0;
 }
 
 /**
@@ -56,7 +57,7 @@ int __wait_add(struct job_t *j, int8_t w) {
  */
 int job_add(struct job_t *j, int8_t w) {
   if (w < 0) {
-    __job_add(j)
+    __job_add(j);
   } else {
     __wait_add(j, w);
   }

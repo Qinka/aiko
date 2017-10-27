@@ -9,8 +9,8 @@ extern struct job_t sys_initialization;
 
 
 void aiko_initialization(void) {
-  job_add(&sys_initialization);
-  job_add(&job_initialization);
+  job_add(&sys_initialization,-1);
+  job_add(&job_initialization,-1);
   while(1)
     job_scheduler_launch();
 }
