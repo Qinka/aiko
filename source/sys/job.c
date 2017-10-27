@@ -100,14 +100,15 @@ void wait_handler(void) {
   struct wait_t *curr = wait_queue;
   struct wait_t *last = wait_queue;
   while (curr) {
-    if (curr->wait_time < 0) {
-      last->next_wait_p = curr->next_wait_p;
-      __job_add(curr->wait_job);
-      free(curr);
-    } else {
+    if (curr->wait_time > 0) {
       curr->wait_time -= 1;
       last = curr;
+    } else {
+      if(last != curr)
+        last->next_wait_p = curr->next_wait_p;
+      __job_add(curr->wait_job);
+      free(curr);
     }
-    curr = last->next_wait_p;
+    curr = curr->next_wait_p;
   }
 }
