@@ -137,10 +137,12 @@ SECTIONS
   } >RAM
 
   /* MEMORY_bank1 section, code must be located here explicitly            */
-  .dynamic_mem :
+  .dynamic_mem : AT 0x60000000
   {
+    . = ALIGN(4);
     *(.dynamic_mem)
     *(.dynamic_mem*)
+    . = ALIGN(4);
   } > ExtRAM
 
   /* Remove information from the standard libraries */
