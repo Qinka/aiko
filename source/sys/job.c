@@ -54,8 +54,8 @@ int __wait_add(struct job_t *j, int8_t t)
   struct wait_t *w = (struct wait_t *)malloc(sizeof(struct wait_t));
   w->wait_job = j;
   w->wait_time = t;
-  w->next_wait_p = wait_queue->next_wait_p;
-  wait_queue->next_wait_p = w;
+  w->next_wait_p = wait_queue.next_wait_p;
+  wait_queue.next_wait_p = w;
   return 0;
 }
 
@@ -117,7 +117,7 @@ int job_scheduler_launch()
 }
 void wait_handler(void)
 {
-  struct wait_t *curr = wait_queue;
+  struct wait_t *curr = &wait_queue;
   while (curr->next_wait_p)
   {
     struct wait_t *this = curr->next_wait_p;
