@@ -137,7 +137,7 @@ SECTIONS
   } >RAM
 
   /* MEMORY_bank1 section, code must be located here explicitly            */
-  .dynamic_mem : AT 0x60000000
+  .dynamic_mem :
   {
     . = ALIGN(4);
     *(.dynamic_mem)

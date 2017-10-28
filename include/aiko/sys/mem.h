@@ -12,7 +12,7 @@
 #include <stdint.h>
 
 #define AIKO_MEM_POOL_MAX_SIZE (sizeof(uint32_t) * AIKO_MEM_TABLE_MAX_SIZE)
-#define AIKO_MEM_TABLE_MAX_SIZE 0xFF
+#define AIKO_MEM_TABLE_MAX_SIZE 0x200
 
 struct mem_pool_t {
   uint8_t *MP_pool;
