@@ -8,10 +8,11 @@
 #define _AIKO_SYS_MEM_C_
 #include <aiko/sys/mem.h>
 
-uint32_t __mem_pool[AIKO_MEM_POOL_MAX_SIZE] __attribute__((at(0X68000000)));
+__attribute__((section("dynamic_mem")))
+uint32_t __mem_pool[AIKO_MEM_POOL_MAX_SIZE];
 
-uint16_t __mem_table[AIKO_MEM_TABLE_MAX_SIZE]
-    __attribute__((at(0X68000000 + sizeof(uint32_t) * AIKO_MEM_POOL_MAX_SIZE)));
+__attribute__((section("dynamic_mem")))
+uint16_t __mem_table[AIKO_MEM_TABLE_MAX_SIZE];
 
 struct mem_pool_t aiko_mem_pool = {
     .MP_pool = __mem_pool, .MP_table = __mem_table, .MP_inited = false};
