@@ -137,15 +137,6 @@ SECTIONS
   } >RAM
 
   /* MEMORY_bank1 section, code must be located here explicitly            */
-  /* Example: extern int foo(void) __attribute__ ((section (".mb1text"))); */
-  /* .memory_b1_text :
-  {
-    *(.mb1text)        /* .mb1text sections (code) */
-    *(.mb1text*)       /* .mb1text* sections (code)  */
-    *(.mb1rodata)      /* read-only data (constants) */
-    *(.mb1rodata*)
-  } > ExtRAM*/
-
   .dynamic_mem :
   {
     *(.dynamic_mem)
